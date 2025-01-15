@@ -15,7 +15,7 @@
 	{/each}
 </section>
 <section id="examples">
-	{#each copy.charts as example, i}
+	{#each copy.charts as example}
 		<ChartExample {example} />
 	{/each}
 </section>
@@ -25,5 +25,11 @@
 	#intro {
 		max-width: 700px;
 		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	#examples {
+		padding: 0 1rem;
+		margin-top: 6rem;
 	}
 </style>

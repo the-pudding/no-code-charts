@@ -9,6 +9,8 @@
     let divider;
     let container;
 
+    let aspectRatio = title == "Bubble Chart" || title == "Animated Stacked Bars" ? "1/0.575" : "1/0.73"
+
     const handleMove = (event) => {
         const { left, width } = container.getBoundingClientRect();
         const posX = (event.clientX || event.touches?.[0]?.clientX) - left;
@@ -42,7 +44,7 @@
     });
 </script>
 
-<div class="compare-container" bind:this={container} style:aspect-ratio={title=="Stripe Plot" ? "1/0.75" : "1/0.6"}>
+<div class="compare-container" bind:this={container} style:aspect-ratio={aspectRatio}>
     <div class="image-wrapper before">
         <img src="assets/images/{beforeImage}" alt="Before" class="before-image" />
         <p class="label">No Code</p>
@@ -70,8 +72,9 @@
         overflow: hidden;
         width: 100%;
         max-width: 800px;
-        margin: 0 auto;
+        margin: 1rem auto;
         height: 100%;
+        border: 1px solid var(--color-gray-200);
     }
 
     .image-wrapper {
@@ -107,6 +110,7 @@
         border-radius: 3px;
         text-transform: uppercase;
         font-weight: 700;
+        border: 1px solid var(--color-gray-200);
     }
     .after .label {
         left: 0.75rem;

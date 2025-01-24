@@ -9,7 +9,7 @@
     let divider;
     let container;
 
-    let aspectRatio = title == "Bubble Chart" || title == "Animated Stacked Bars" ? "1/0.575" : "1/0.73"
+    let aspectRatio = title == "Bubble Chart" || title == "Animated Stacked Bars" ? "1/0.575" : "1/0.575"
 
     const handleMove = (event) => {
         const { left, width } = container.getBoundingClientRect();
@@ -72,8 +72,7 @@
         overflow: hidden;
         width: 100%;
         max-width: 800px;
-        margin: 1rem auto;
-        height: 100%;
+        margin: 0.25rem 0 1rem 0;
         border: 1px solid var(--color-gray-200);
     }
 

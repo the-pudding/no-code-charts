@@ -32,4 +32,8 @@
 		padding: 0 1rem;
 		margin-top: 6rem;
 	}
+
+	p {
+		font-size: var(--18px);
+	}
 </style>

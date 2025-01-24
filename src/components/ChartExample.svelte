@@ -13,7 +13,7 @@
         <div class="right">
             <h3>How-To Video</h3>
             <div class="video-wrapper">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cZOXjrVNpWE?si=7H_rywUCmHdV2SRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src={example.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>

@@ -21,8 +21,14 @@
     <p class="seen-in">As seen in <a href="{example.publicationURL}">{example.publicationHeadline}</a></p>
     <div class="details">
         {#each example.text as graf, i}
-            <p>{graf.value}</p>
+            <p>{@html graf.value}</p>
         {/each}
+    </div>
+    <div class="details">
+        <h3>Assets</h3>
+        <ul>
+            <li>{@html example.assets}</li>
+        </ul>
     </div>
     <div class="details">
         <h3>Tools used</h3>
@@ -40,6 +46,7 @@
     }
     h2 {
         font-weight: 700;
+        position: relative;
     }
     h2, .details {
         max-width: 700px;

@@ -33,6 +33,12 @@
 		margin-top: 6rem;
 	}
 
+	h1 {
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 3rem;
+	}
+
 	p {
 		font-size: var(--18px);
 	}

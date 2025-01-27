@@ -1,10 +1,26 @@
 <script>
     import Compare from "$components/Compare.svelte";
+    import inView from "$actions/inView.js";
+
+    import { activeSection } from "$runes/misc.svelte.js";
+
+
+    // Explicitly subscribe to the store
+    $effect(() => {
+        console.log("activeSection value:", activeSection.activeSection);
+    });
+
+    function setActiveSection(section) {
+        activeSection.activeSection = section;
+    }
 
     let {example} = $props();
 </script>
 
-<div class="example">
+<div class="example" id="{example.iconID}"
+    use:inView
+    on:enter={() => setActiveSection(example.title)}
+>
     <div class="split-wrapper">
         <div class="left">
             <h3>The chart</h3>
@@ -44,20 +60,72 @@
         width: 100%;
         margin-bottom: 10rem;
     }
+
+    .example:first-of-type h2::before {
+        content: "";
+        width: 50px;
+        height: 30px;
+        background: url("assets/images/strip.png");
+        background-repeat: no-repeat;
+        background-size: 50px 30px;
+        position: absolute;
+        left: -60px;
+        top: 10px;
+    }
+
+    .example:nth-of-type(2) h2::before {
+        content: "";
+        width: 50px;
+        height: 30px;
+        background: url("assets/images/bubble.png");
+        background-repeat: no-repeat;
+        background-size: 50px 30px;
+        position: absolute;
+        left: -60px;
+        top: 10px;
+    }
+
+    .example:nth-of-type(3) h2::before {
+        content: "";
+        width: 50px;
+        height: 30px;
+        background: url("assets/images/stackedbar.png");
+        background-repeat: no-repeat;
+        background-size: 50px 30px;
+        position: absolute;
+        left: -60px;
+        top: 10px;
+    }
+
+    .example:nth-of-type(4) h2::before {
+        content: "";
+        width: 50px;
+        height: 30px;
+        background: url("assets/images/percentbar.png");
+        background-repeat: no-repeat;
+        background-size: 50px 30px;
+        position: absolute;
+        left: -60px;
+        top: 10px;
+    }
+
     h2 {
         font-weight: 700;
         position: relative;
+        max-width: 700px;
+        margin: 0rem auto 0rem auto;
+        padding: 0;
     }
-    h2, .details {
+    .details {
         max-width: 700px;
         margin: 1rem auto;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     .seen-in {
         max-width: 700px;
-        margin: 0 auto;
-        padding: 0 1rem; 
+        margin: 0 auto 2rem auto;
+        padding: 0; 
         font-family: var(--sans);
         font-style: italic;
     }
@@ -101,4 +169,20 @@
     p {
 		font-size: var(--18px);
 	}
+
+    @media(max-width: 900px) {
+        .example {
+            margin-bottom: 5rem;
+        }
+        .split-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .split-wrapper .left, .split-wrapper .right  {
+            width: 100%;
+            max-width: 700px;
+        }
+    }
 </style>

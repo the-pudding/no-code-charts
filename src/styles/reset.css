@@ -8,6 +8,7 @@ body {
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
 	-webkit-tap-highlight-color: transparent;
+	overflow-x: hidden;
 }
 
 h1,
@@ -28,6 +29,11 @@ mark {
 a {
 	color: var(--color-link, blue);
 	text-decoration: 2px underline var(--color-link, blue);
+}
+
+a:hover {
+	color: var(--color-gray-600);
+	text-decoration: 2px underline var(--color-gray-600);
 }
 
 

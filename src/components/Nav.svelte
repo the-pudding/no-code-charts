@@ -51,7 +51,7 @@
         justify-content: center;  
         align-items: center;
         gap: 0.5rem;
-        padding: 0 1rem;
+        padding: 1rem;
         opacity: 0.5;
         transition: all 0.5s linear;
     }
@@ -69,10 +69,28 @@
     li p {
         font-family: var(--sans);
         font-weight: 700;
+        padding: 0;
+        margin: 0;
     }
 
     img {
         width: 50px;
         height: 30px;
+    }
+
+    @media (max-width: 900px) {
+        ul {
+            gap: 1rem;
+        }
+        li p {
+            display: none;
+        }
+    }
+
+    @media (max-width: 400px) {
+        img {
+            width: 40px;
+            height: 24px;
+        }
     }
 </style>

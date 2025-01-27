@@ -4,12 +4,6 @@
 
     import { activeSection } from "$runes/misc.svelte.js";
 
-
-    // Explicitly subscribe to the store
-    $effect(() => {
-        console.log("activeSection value:", activeSection.activeSection);
-    });
-
     function setActiveSection(section) {
         activeSection.activeSection = section;
     }
@@ -18,7 +12,7 @@
 </script>
 
 <div class="example" id="{example.iconID}"
-    use:inView
+    use:inView={{ bottom: 0 }}
     on:enter={() => setActiveSection(example.title)}
 >
     <div class="split-wrapper">
@@ -58,7 +52,7 @@
 <style>
     .example {
         width: 100%;
-        margin-bottom: 10rem;
+        margin-bottom: 15rem;
     }
 
     .example:first-of-type h2::before {
@@ -183,6 +177,10 @@
         .split-wrapper .left, .split-wrapper .right  {
             width: 100%;
             max-width: 700px;
+        }
+
+        h2::before {
+            display: none;
         }
     }
 </style>

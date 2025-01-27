@@ -1,9 +1,9 @@
 <script>
 	let {
-		title = "Title TK",
-		description = "Description TK",
-		url = "https://pudding.cool",
-		keywords = "",
+		title = "How to recreate our charts without code",
+		description = "Jan walks you through no-code examples of how to make some of the charts from our latest pieces.",
+		url = "https://pudding.cool/process/no-code-charts/",
+		keywords = "code, pudding, figma, flourish, chart, grap, how-to, video, tutorial",
 		preloadFont = []
 	} = $props();
 </script>
@@ -21,7 +21,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="en_US" />
 
-	<meta property="og:image" content="{url}/assets/social-facebook.jpg" />
+	<meta property="og:image" content="{url}/assets/images/og-social.jpg" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="628" />
@@ -31,7 +31,7 @@
 	<meta name="twitter:creator" content="@puddingviz" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image:src" content="{url}/assets/social-twitter.jpg" />
+	<meta name="twitter:image:src" content="{url}/assets/images/og-social.jpg" />
 
 	<meta name="robots" content="max-image-preview:large" />
 

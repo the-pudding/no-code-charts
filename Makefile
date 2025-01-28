@@ -8,10 +8,10 @@ github:
 	git commit -m "update github pages"
 	git push
 	
-# aws-sync:
-# 	aws s3 sync build s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000'
+aws-sync:
+	aws s3 sync build s3://pudding.cool/process/no-code-charts --delete --cache-control 'max-age=31536000'
 
-# aws-cache:
-# 	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/year/month/name*'	
+aws-cache:
+	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/process/no-code-charts*'	
 
-# pudding: aws-sync aws-cache
+pudding: aws-sync aws-cache

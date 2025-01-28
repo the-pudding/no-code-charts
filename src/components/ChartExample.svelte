@@ -15,18 +15,6 @@
     use:inView={{ bottom: 0 }}
     on:enter={() => setActiveSection(example.title)}
 >
-    <div class="split-wrapper">
-        <div class="left">
-            <h3>The chart</h3>
-            <Compare beforeImage={example.beforeImage} afterImage={example.afterImage} title={example.title}/>
-        </div>
-        <div class="right">
-            <h3>How-To Video</h3>
-            <div class="video-wrapper">
-                <iframe width="100%" height="100%" src={example.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
     <h2>{example.title}</h2>
     <p class="seen-in">As seen in <a href="{example.publicationURL}">{example.publicationHeadline}</a></p>
     <div class="details">
@@ -47,12 +35,25 @@
             <li><span>NO CODE:</span>{@html example.noCodeTools}</li>
         </ul>
     </div>
+    <div class="split-wrapper">
+        <div class="left">
+            <h3>The chart</h3>
+            <Compare beforeImage={example.beforeImage} afterImage={example.afterImage} title={example.title}/>
+        </div>
+        <div class="right">
+            <h3>How-To Video</h3>
+            <div class="video-wrapper">
+                <iframe width="100%" height="100%" src={example.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
     .example {
         width: 100%;
-        margin-bottom: 15rem;
+        margin-bottom: 12rem;
+        padding-top: 1rem;
     }
 
     .example:first-of-type h2::before {
@@ -131,7 +132,7 @@
         flex-direction: row;
         gap: 3rem;
         padding: 1rem 0;
-        border-top: 1px solid var(--color-gray-200);
+        border-bottom: 1px solid var(--color-gray-300);
     }
 
     .split-wrapper .left, .split-wrapper .right  {

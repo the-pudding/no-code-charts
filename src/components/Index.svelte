@@ -39,6 +39,9 @@
 		font-weight: 700;
 		line-height: 1;
 		margin-bottom: 3rem;
+		font-family: var(--serif);
+		letter-spacing: -1px;
+		font-size: var(--64px);
 	}
 
 	p {
@@ -51,5 +54,11 @@
 
 	:global(.byline a) {
 		font-weight: 700;
+	}
+
+	@media(max-width: 900px) {
+		h1 {
+			font-size: var(--48px);
+		}
 	}
 </style>

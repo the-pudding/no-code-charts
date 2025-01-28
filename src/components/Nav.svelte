@@ -33,7 +33,7 @@
         width: 100%;
         background: rgba(255,255,255,0.95);
         z-index: 1000;
-        border-bottom: 1px solid var(--color-gray-200);
+        border-bottom: 1px solid var(--color-gray-300);
         margin-top: 5rem;
     }
     ul {

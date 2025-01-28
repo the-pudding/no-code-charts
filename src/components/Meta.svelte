@@ -1,7 +1,7 @@
 <script>
 	let {
 		title = "How to recreate our charts without code",
-		description = "Jan walks you through no-code examples of how to make some of the charts from our latest pieces.",
+		description = "Video tutorials: You don't need to know how to code to make cool charts! Here's how to do it.",
 		url = "https://pudding.cool/process/no-code-charts/",
 		keywords = "code, pudding, figma, flourish, chart, grap, how-to, video, tutorial",
 		preloadFont = []
@@ -21,7 +21,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="en_US" />
 
-	<meta property="og:image" content="{url}/assets/images/og-social.jpg" />
+	<meta property="og:image" content="{url}assets/images/og-social.jpg" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="628" />
@@ -31,7 +31,7 @@
 	<meta name="twitter:creator" content="@puddingviz" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image:src" content="{url}/assets/images/og-social.jpg" />
+	<meta name="twitter:image:src" content="{url}assets/images/og-social.jpg" />
 
 	<meta name="robots" content="max-image-preview:large" />
 

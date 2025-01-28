@@ -60,7 +60,7 @@
         content: "";
         width: 50px;
         height: 30px;
-        background: url("assets/images/strip.png");
+        background: url("/assets/images/strip.png");
         background-repeat: no-repeat;
         background-size: 50px 30px;
         position: absolute;
@@ -72,7 +72,7 @@
         content: "";
         width: 50px;
         height: 30px;
-        background: url("assets/images/bubble.png");
+        background: url("/assets/images/bubble.png");
         background-repeat: no-repeat;
         background-size: 50px 30px;
         position: absolute;
@@ -84,7 +84,7 @@
         content: "";
         width: 50px;
         height: 30px;
-        background: url("assets/images/stackedbar.png");
+        background: url("/assets/images/stackedbar.png");
         background-repeat: no-repeat;
         background-size: 50px 30px;
         position: absolute;
@@ -96,7 +96,7 @@
         content: "";
         width: 50px;
         height: 30px;
-        background: url("assets/images/percentbar.png");
+        background: url("/assets/images/percentbar.png");
         background-repeat: no-repeat;
         background-size: 50px 30px;
         position: absolute;

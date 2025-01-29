@@ -135,6 +135,10 @@
         border-bottom: 1px solid var(--color-gray-300);
     }
 
+    .example:nth-of-type(4) .split-wrapper {
+        border-bottom: none;
+    }
+
     .split-wrapper .left, .split-wrapper .right  {
         width: 50%;
     }
